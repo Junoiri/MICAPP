@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_calendar_layout_low_contrast">
+
+    <!-- Main Content -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- SlidingUpPanelLayout -->
+        <com.sothree.slidinguppanel.SlidingUpPanelLayout
+            android:id="@+id/sliding_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            app:umanoPanelHeight="128dp"
+            app:umanoShadowHeight="4dp"
+            app:umanoAnchorPoint="0.75"
+            app:umanoParallaxOffset="100dp">
+
+            <!-- Layout with Toolbar and CalendarView -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/appBarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="#E56C70"
+                        app:layout_scrollFlags="scroll|enterAlways" />
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_below="@id/appBarLayout"
+                    android:layout_marginTop="0dp" />
+
+                <LinearLayout
+                    android:id="@+id/dateInfoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/calendarView"
+                    android:layout_marginTop="8dp"
+                    android:padding="4dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Inner Layout for date and day, with background -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/bg_button">
+
+                        <TextView
+                            android:id="@+id/dayOfWeekText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Monday"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@android:color/black"
+                            android:gravity="start" />
+
+                        <TextView
+                            android:id="@+id/dateText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="01.01.2024"
+                            android:layout_marginRight="20dp"
+                            android:textSize="16sp"
+                            android:textColor="@android:color/black"
+                            android:gravity="end" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/addEventButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_add_event"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dateInfoLayout"
+                    android:orientation="vertical"
+                    android:paddingTop="0dp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/selectedDayEventsLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Events for selected day"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/eventsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:scrollbars="vertical" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <!-- Sliding Up Panel Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="top"
+                android:background="@drawable/rounded_bg_sliding_panel">
+
+                <ImageView
+                    android:id="@+id/panel_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_swipe_up"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="10dp" />
+
+                <TextView
+                    android:id="@+id/panel_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Swipe Up"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="4dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/slidingPanelRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+
+
+
+        </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    </FrameLayout>
+
+    <!-- NavigationView for the drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

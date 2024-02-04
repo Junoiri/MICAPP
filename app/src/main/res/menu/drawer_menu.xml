@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_options"
+            android:title="@string/Options" />
+        <item
+            android:id="@+id/nav_timetable"
+            android:title="@string/Timetable" />
+        <item
+            android:id="@+id/nav_profile"
+            android:title="@string/Profile" />
+        <item
+            android:id="@+id/nav_filtering"
+            android:title="@string/Filtering" />
+
+    </group>
+</menu>

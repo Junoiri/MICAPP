@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/background_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_text"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/buttonLoginMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:backgroundTint="#2F4C6A"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:id="@+id/buttonSignupMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/signup"
+        android:backgroundTint="#2F4C6A"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

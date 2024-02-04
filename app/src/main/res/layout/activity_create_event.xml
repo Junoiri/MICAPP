@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_calendar_layout_low_contrast"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:contentDescription="@string/close"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/closeButton"
+        android:layout_marginTop="0dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/eventName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/event_name"
+                android:textSize="22sp"
+                android:inputType="text"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:background="@android:color/transparent"
+                android:layout_marginBottom="24dp"/>
+
+            <TextView
+                android:id="@+id/dayDateDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Monday, 01.01.2024"
+                android:textColor="#FFFFFF"
+                android:padding="16dp"
+                android:background="@drawable/bg_button"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/userEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User Name - user@example.com"
+                android:textColor="#FFFFFF"
+                android:drawableStart="@drawable/ic_profile"
+                android:drawablePadding="18dp"
+                android:padding="16dp"
+                android:background="@drawable/bg_button"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/addGroupsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_groups"
+                android:textColor="#FFFFFF"
+                android:drawableStart="@drawable/ic_group_v3"
+                android:drawablePadding="16dp"
+                android:padding="16dp"
+                android:background="@drawable/bg_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="24dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_button"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_categories" />
+
+                <Spinner
+                    android:id="@+id/categorySpinner"
+                    android:layout_width="0dp"
+                    android:paddingStart="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/eventDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/add_description"
+                android:inputType="textMultiLine|textCapSentences"
+                android:gravity="top|start"
+                android:minLines="1"
+                android:maxLines="5"
+                android:scrollbars="vertical"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:background="@drawable/bg_button"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp"
+                android:drawableStart="@drawable/ic_description"
+                android:drawablePadding="16dp" />
+
+            <TextView
+                android:id="@+id/addAttachmentsText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_attachments"
+                android:textColor="#FFFFFF"
+                android:drawableStart="@drawable/ic_attach"
+                android:drawablePadding="16dp"
+                android:padding="16dp"
+                android:background="@drawable/bg_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onAddAttachmentClick"
+                android:layout_marginBottom="-12dp" />
+
+            <!-- Remove file ImageView -->
+            <ImageView
+                android:id="@+id/removeAttachmentImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_remove_file"
+                android:contentDescription="@string/remove_file"
+                android:visibility="gone" />
+
+
+            <!-- Attachments RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/attachmentsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginBottom="30dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:background="@drawable/bg_button_save"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"/>
+</RelativeLayout>

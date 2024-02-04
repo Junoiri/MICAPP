@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="textViewEmailVerificationHeader" type="id"/>
+    <item name="textViewVerificationDescription" type="id"/>
+    <item name="textViewEnterCodeDescription" type="id"/>
+    <item name="textViewResetPasswordHeader" type="id"/>
+    <item name="textViewResetPasswordDescription" type="id"/>
+    <item name="textViewPasswordCriteria" type="id"/>
+    <item name="editTextNewPassword" type="id"/>
+    <item name="editTextConfirmNewPassword" type="id"/>
+    <item name="buttonContinueResetPassword" type="id"/>
+    <item name="horizontalScrollView" type="id"/>
+</resources>

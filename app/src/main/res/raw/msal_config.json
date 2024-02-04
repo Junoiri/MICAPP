@@ -1,0 +1,16 @@
+{
+  "client_id": "b7484251-8f7f-443f-aae2-5aa84e766d8b",
+  "authorization_user_agent": "DEFAULT",
+  "redirect_uri": "msauth://com.example.micapp/uuItZrZzm0LwnUXX5QYg2WGfetA=",
+  "account_mode": "SINGLE",
+  "broker_redirect_uri_registered": true,
+  "authorities": [
+    {
+      "type": "AAD",
+      "audience": {
+        "type": "AzureADandPersonalMicrosoftAccount",
+        "tenant_id": "common"
+      }
+    }
+  ]
+}

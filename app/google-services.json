@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "369001973714",
+    "project_id": "micapp-354ec",
+    "storage_bucket": "micapp-354ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369001973714:android:5ac40324860a288935ea0b",
+        "android_client_info": {
+          "package_name": "com.example.micapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369001973714-gfu78ial6ksbfd5c3a3c6p6000c8msh8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.micapp",
+            "certificate_hash": "bae22d66b6739b42f09d45d7e50620d9619f7ad0"
+          }
+        },
+        {
+          "client_id": "369001973714-fo9orc1i8ouj8tddlmq4alnvht409ppm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyL4AGzzRcjMlavSl2C8g6yRWJ6fnl8tk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369001973714-fo9orc1i8ouj8tddlmq4alnvht409ppm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@drawable/bg_file_item"
+    android:layout_marginTop="-11dp"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/attachmentName"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textColor="#C1C1C1"
+        android:textSize="12sp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="4dp"/>
+
+    <ImageView
+        android:id="@+id/removeAttachmentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_remove_file"
+        android:contentDescription="@string/remove_file"
+        android:layout_marginTop="4dp"/>
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/login_welcome"
+        android:textColor="#D5D5D5"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editTextEmailLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#7A5C7E"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textColor="#D5D5D5"
+        android:textColorHint="#86D5D5D5" />
+
+    <EditText
+        android:id="@+id/editTextPasswordLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#7A5C7E"
+        android:hint="@string/password"
+        android:textColorHint="#86D5D5D5"
+        android:textColor="#D5D5D5"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#7A5C7E"
+        android:text="@string/login"
+        android:textColor="#D5D5D5" />
+
+    <TextView
+        android:id="@+id/textViewForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="16dp"
+        android:textColor="#D5D5D5"
+        android:text="@string/forgot_password" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:textColor="#D5D5D5"
+        android:text="@string/or" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/buttonGoogleLogin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/login_with_google"
+            android:scaleType="centerInside"
+            android:src="@drawable/google_icon" />
+
+        <ImageButton
+            android:id="@+id/buttonFacebookLogin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="9dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/login_with_facebook"
+            android:scaleType="centerInside"
+            android:src="@drawable/facebook_icon" />
+
+        <ImageButton
+            android:id="@+id/buttonGithubLogin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/login_with_github"
+            android:scaleType="centerInside"
+            android:src="@drawable/github_icon" />
+
+        <ImageButton
+            android:id="@+id/buttonMicrosoftLogin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/login_with_microsoft"
+            android:scaleType="centerInside"
+            android:src="@drawable/microsoft_icon" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onSignUpTextClick"
+        android:text="@string/dont_have_account_sign_up"
+        android:textColor="#D4D4D4"
+        android:textStyle="bold" />
+</LinearLayout>

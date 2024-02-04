@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="condition_met">#568E50</color>
+    <color name="condition_not_met">#C15252</color>
+    <color name="weekday_text">#E56C70</color>
+    <color name="primary_color">#E56C70</color>
+    <color name="secondary_color">#365071</color>
+    <color name="popupBackground">#E56C70</color>
+    <color name="category_disabled">#E56C70</color>
+    <color name="category_enabled">#FFFFFF</color>
+
+
+</resources>

@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MiCapp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/primary_color</item>
+        <item name="materialButtonStyle">@style/Widget.MiCapp.Button</item>
+    </style>
+
+    <style name="Theme.MiCapp" parent="Base.Theme.MiCapp">
+    </style>
+
+    <style name="Widget.MiCapp.Button" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/primary_color</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>
